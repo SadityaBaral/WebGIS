@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/navbar.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <script>
+            window.onload = function () {
+                fetch("./navbar.html")
+                    .then((response) => response.text())
+                    .then((data) => {
+                        document.getElementById("nav-container").innerHTML =
+                            data;
+                    });
+            };
+        </script>
+        <title>Introduction</title>
+    </head>
+    <body>
+        <div>
+            <div id="nav-container"></div>
+
+            <div class="container">
+                <div class="card">
+                    <img
+                        src="./assets/manchey.png"
+                        alt="Card image"
+                        class="card-img"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Traverse</h5>
+                        <p class="card-text">
+                            In surveying, a traverse is a method used to
+                            establish a series of connected points by measuring
+                            the distances and angles between them. Theodolites
+                            or Total Stations are used to measure angles and
+                            distances. There are two types: an open traverse and
+                            a closed traverse. This technique is especially
+                            useful in construction, road planning, and land
+                            development, where exact boundaries and layouts are
+                            essential.Traverse surveys are popular because they
+                            allow for accurate mapping in areas where other
+                            methods, like GPS, might not work well, such as
+                            dense forests, urban environments, or rugged
+                            terrain.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img
+                        src="./assets/gadit.jpeg"
+                        alt="Card image"
+                        class="card-img"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Calculation</h5>
+                        <p class="card-text">
+                            It involves measuring distances and angles between
+                            stations and then using trigonometry to calculate
+                            coordinates. First, the angles are adjusted and
+                            bearings are calculated for each leg of the
+                            traverse.Then Changing in eastings and northings are
+                            then computed. The final station's coordinates are
+                            compared to the starting point, and any closing
+                            errors are adjusted using methods like the Bowditch
+                            Rule.
+                        </p>
+                        <a href="./computation.html" class="card-btn"
+                            >Calculate</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    background-color: #e1dfe7;
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+figure {
+    width: 500px;
+    aspect-ratio: 8 / 5;
+    --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
+    --accent: hsl(280, 62%, 29%);
+    transition: background 0.2s;
+    background: radial-gradient(
+            circle at top left,
+            var(--accent),
+            transparent 75%
+        ),
+        var(--bg);
+    margin: 0 auto; /* Center the figure horizontally */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+figure:after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    bottom: 0%;
+    left: 10%;
+    background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
+    filter: blur(25px);
+    transform: translateX(calc(var(--hover) * 15%))
+        scale(calc(1 + (var(--hover) * 0.2)));
+    transition: transform 0.2s, background 0.2s;
+}
+
+img {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 40%;
+    transform: translateX(calc(var(--hover) * -15%))
+        scale(calc(1 + (var(--hover) * 0.2)));
+    transition: transform 0.2s;
+}
+
+article {
+    --hover: 0;
+    text-align: center;
+    margin: 0 auto; /* Center the article horizontally */
+}
+
+article:hover {
+    --hover: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.container h2 {
+    margin: 1rem 0; /* Adjust spacing around the heading */
+}
+
+p {
+    text-align: center; /* Center-align paragraph text */
+    margin: 0 auto; /* Center the paragraph block */
+    width: 600px; /* Set the width of the paragraph */
+    font-size: 1rem; /* Adjust font size if needed */
+    line-height: 1.5; /* Improve readability */
+    position: relative; /* Enable absolute positioning of pseudo-elements */
+}
+
+p::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #e1dfe7 60%);
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+p span {
+    display: block;
+    position: relative;
+    z-index: 2;
+}

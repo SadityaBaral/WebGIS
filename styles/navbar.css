@@ -1,0 +1,34 @@
+.nav-container {
+    background-color: #494d5f;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.nav-container ul {
+    background-color: #494d5f;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container li {
+    background-color: #494d5f;
+    margin: 0 5rem;
+}
+
+.nav-container li a {
+    text-decoration: none;
+    background-color: #494d5f;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-container li a:hover {
+    color: #ff4b4b;
+    cursor: pointer;
+}

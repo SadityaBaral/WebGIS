@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/about.css" />
+        <link rel="stylesheet" href="./styles/navbar.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <script>
+            window.onload = function () {
+                fetch("./navbar.html")
+                    .then((response) => response.text())
+                    .then((data) => {
+                        document.getElementById("nav-container").innerHTML =
+                            data;
+                    });
+            };
+        </script>
+        <title>About</title>
+    </head>
+    <body>
+        <div>
+            <div id="nav-container"></div>
+
+            <div class="container">
+                <article>
+                    <figure>
+                        <img src="./assets/rakshyas.png" alt="" />
+                    </figure>
+                    <h2>Saditya Baral</h2>
+                    <p>
+                        <span>
+                            My name is Saditya Baral, and I'm a Geomatics
+                            Engineering student at Kathmandu University.
+                            Currently, I'm working on a small web development
+                            project aimed at making traverse survey calculations
+                            more efficient using HTML, CSS, and JavaScript. As a
+                            passionate learner, I'm always open to new knowledge
+                            and experiences, and I love pushing boundaries to
+                            improve my skills. I've developed this handy tool to
+                            help simplify and optimize traverse survey
+                            calculations, combining my enthusiasm for
+                            problem-solving with my drive to learn and grow.
+                        </span>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </body>
+</html>
